@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    build:
+      dockerfile: dev.DockerFile
+      context: .
+    volumes:
+      - .:/code
+      - /code/node_modules
+    ports:
+      - "8080:8080"

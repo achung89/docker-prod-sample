@@ -1,0 +1,24 @@
+{
+  "name": "docker-dev",
+  "version": "1.0.0",
+  "description": "Docker development environment",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/achung89/Docker-dev.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/achung89/Docker-dev/issues"
+  },
+  "homepage": "https://github.com/achung89/Docker-dev#readme",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "express": "^4.15.2"
+  }
+}
