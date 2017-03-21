@@ -10,3 +10,20 @@ services:
       - /code/node_modules
     ports:
       - "8080:8080"
+    environment:
+      - DB_HOST=db
+    depends_on:
+      - db
+    command: npm run dev
+  db:
+    image: mysql:latest
+    volumes:
+      - ${pwd}/mysql/data/:/var/lib/mysql
+      - ${pwd}/server/db/schema/:/docker-entrypoint-initdb.d
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=genericDB
+      # other env variables https://hub.docker.com/_/mysql/
+
+
+
