@@ -16,16 +16,16 @@ var query = function (query) {
   })
 }
 query('SHOW DATABASES').then((results) => {
-    console.log('databases',results);
+    console.log('Databases:',results);
     return query('SHOW TABLES');
   }).then((results) => {
-  console.log('tables',results);
+  console.log('Tables:',results);
   return query('INSERT INTO hellos ( casual, formal ) VALUES ( "waddup", "hello" );')
   }).then((results) => {
-    console.log(results);
+    console.log('Insert into:', results);
     return query('SELECT * FROM hellos');
   }).then((results) => {
-    console.log(results);
+    console.log('Select all', results);
   }).catch((err) => {
     throw err;
   })
