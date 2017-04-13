@@ -3,9 +3,10 @@ var connection = mysql.createConnection({
   host     : process.env.DB_HOST,
   user     : 'root',
   password : 'secret',
-  database : 'genericDB'
+  database : 'dbname'
 });
- 
+
+console.log( 'Database ip:', process.env.DB_HOST);
 connection.connect();
  
 connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {

@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS genericDB;
-USE genericDB;
+CREATE DATABASE IF NOT EXISTS dbname;
+USE dbname;
 
 CREATE TABLE hellos (
   casual VARCHAR (10),
